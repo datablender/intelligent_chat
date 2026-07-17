@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "ichat-memory": {
+      "command": "ichat",
+      "args": ["mcp"],
+      "env": {
+        "DATABASE_URL": "sqlite:///./ichat.db",
+        "DEFAULT_WORKSPACE_ID": "1"
+      }
+    }
+  }
+}

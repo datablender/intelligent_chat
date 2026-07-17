@@ -1,0 +1,54 @@
+﻿# Environment
+.env
+*.env
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+*.egg
+
+# Virtual environments
+.venv/
+.venv311/
+venv/
+env/
+
+# Database (local dev only)
+*.db
+*.sqlite
+*.sqlite3
+
+# Raw session archive (large, local only)
+archive/
+
+# OKF and graph outputs
+knowledge-base/
+graphify-out/
+
+# Test cache
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Ruff
+.ruff_cache/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Alembic compiled
+alembic/__pycache__/
+alembic/versions/__pycache__/
