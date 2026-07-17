@@ -16,7 +16,9 @@ jobs:
           python-version: "3.11"
 
       - name: Install dependencies
-        run: pip install -e ".[dev]" ruff pytest pytest-asyncio sqlalchemy alembic typer anthropic python-dotenv aiosqlite
+        run: |
+          pip install -e .
+          pip install ruff pytest pytest-asyncio
 
       - name: Lint
         run: ruff check .
