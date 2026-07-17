@@ -95,7 +95,12 @@ def parse_session_file(path: Path) -> dict | None:
     if not messages:
         return None
 
-    project_name = Path(cwd).name if cwd else path.parent.name
+    if cwd:
+        # Normalize backslashes so Windows paths work on Linux (CI uses posix Path)
+        normalized = cwd.replace("\\", "/").rstrip("/")
+        project_name = normalized.split("/")[-1]
+    else:
+        project_name = path.parent.name
 
     return {
         "session_id": session_id,
